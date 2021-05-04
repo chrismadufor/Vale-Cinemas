@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link
+      rel="stylesheet"
+      href="../fontawesome-free-5.15.2-web/fa-css/all.css"
+    />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="form">
+      <div id="book-movie" class="book-movie">
+        <ul>
+          <li>
+            <p>Select Cinema</p>
+            <select id="cinemas">
+              <option value="All Cinemas">All Cinemas</option>
+              <option value="Viva Cinemas Lagos">Viva Cinemas Lagos</option>
+              <option value="Viva Cinemas Abuja">Viva Cinemas Abuja</option>
+              <option value="Viva Cinemas Enugu">Viva Cinemas Enugu</option>
+              <option value="Viva Cinemas Kano">Viva Cinemas Kano</option>
+              <option value="Viva Cinemas Ibadan">Viva Cinemas Ibadan</option>
+              <option value="Viva Cinemas Owerri">Viva Cinemas Owerri</option>
+            </select>
+          </li>
+          <li>
+            <p>Select Date</p>
+            <select name="date">
+              <option>No Dates</option>
+              <option>Mon, 08 Feb</option>
+              <option>Tue, 09 Feb</option>
+              <option>Wed, 10 Feb</option>
+              <option>Thu, 11 Feb</option>
+              <option>Fri, 12 Feb</option>
+              <option>Sat, 13 Feb</option>
+              <option>Sun, 14 Feb</option>
+              <option>Mon, 15 Feb</option>
+            </select>
+          </li>
+          <li>
+            <p>Select Time</p>
+            <select id="time">
+              <option>No Time</option>
+              <option>10:00am</option>
+              <option>12:00pm</option>
+              <option>2:30pm</option>
+              <option>5:00pm</option>
+              <option>7:00am</option>
+            </select>
+          </li>
+          <a href="booking.html"><button class="continue">CONTINUE</button></a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div id="booking-form">
+      <section class="booking-form">
+        <section class="booking-top">
+          <h1>MOVIE TITLE</h1>
+          <ul>
+            <li><i class="fa fa-map-marker"></i>Viva Cinema Lagos</li>
+            <li><i class="fas fa-calendar"></i>Wed, 10 Feb</li>
+            <li><i class="fas fa-clock"></i>1:00pm</li>
+            <li>
+              <a href="extraction.html"
+                ><button class="booking-btn">Go Back</button></a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="booking-other">
+          <h4>Who's going?</h4>
+          <div class="booking-grid">
+            <div class="booking-text">
+              <p>N1000 per ticket</p>
+            </div>
+            <div class="booking-options">
+              <button onclick="ticketDecrement()">-</button>
+              <input type="text" id="ticket-number" value="0" />
+              <button onclick="ticketIncrement()">+</button>
+            </div>
+          </div>
+          <div class="form-item">
+            <h4>Pick food</h4>
+            <div class="booking-grid">
+              <select id="food" value="gofuckyourself">
+                <option value="Food">Food</option>
+                <option value="Popcorn">Popcorn</option>
+                <option value="Hotdog">Hotdog</option>
+              </select>
+              <div class="booking-options">
+                <button onclick="foodDecrement()">-</button>
+                <input type="text" id="food-number" value="0" />
+                <button onclick="foodIncrement()">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <h4>Pick drink</h4>
+            <div class="booking-grid">
+              <select id="drink">
+                <option value="Drink">Drink</option>
+                <option value="Coke">Coke</option>
+                <option value="Water">Water</option>
+              </select>
+              <div class="booking-options">
+                <button onclick="drinkDecrement()">-</button>
+                <input type="text" id="drink-number" value="0" />
+                <button onclick="drinkIncrement()">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <h4>Voucher</h4>
+            <div class="booking-grid voucher">
+              <input
+                type="text"
+                name="voucher"
+                placeholder="Enter Voucher Here"
+              />
+              <button class="booking-btn">Apply</button>
+            </div>
+          </div>
+        </section>
+        <section class="order-summary">
+          <h4>Order Summary</h4>
+          <div class="booking-grid os">
+            <p>Tickect Price</p>
+            <p>
+              <strong>N<span id="ticket-total">0</span>000</strong>
+            </p>
+          </div>
+          <div class="booking-grid os">
+            <p>Food Price</p>
+            <p>
+              <strong>N<span id="food-total">0000</span></strong>
+            </p>
+          </div>
+          <div class="booking-grid os">
+            <p>Drink Price</p>
+            <p>
+              <strong>N<span id="drink-total">0000</span></strong>
+            </p>
+          </div>
+          <div class="booking-grid os">
+            <p>Total</p>
+            <p>
+              <strong>N<span>0000</span></strong>
+            </p>
+          </div>
+        </section>
+        <a href="review.html"
+          ><button class="booking-btn review">REVIEW AND CONTINUE</button></a
+        >
+      </section>
+    </div>
+
+    <div>
+      <section class="before-payment" id="before-payment">
+        <section class="booking-top">
+          <h1>MOVIE TITLE</h1>
+          <ul>
+            <li><i class="fa fa-map-marker"></i>Viva Cinema Lagos</li>
+            <li><i class="fa fa-desktop"></i>Screen</li>
+            <li><i class="fa fa-calendar"></i>Wed, 10 Feb</li>
+            <li><i class="fa fa-clock"></i>1:00pm</li>
+            <li><i class="fa fa-coffee"></i>Food</li>
+            <li><button class="booking-btn">CHANGE</button></li>
+          </ul>
+        </section>
+        <section class="payment-total flex">
+          <p>Total</p>
+          <p>N0000</p>
+        </section>
+        <section class="personal-details">
+          <p>Provide personal details and make payment</p>
+          <form action="" class="personal-details-form">
+            <ul>
+              <li>
+                <label for="name">Full Name</label
+                ><input type="text" id="name" placeholder="Full Name" />
+              </li>
+              <li>
+                <label for="number">Phone Number</label
+                ><input type="text" id="number" placeholder="Phone Number" />
+              </li>
+              <li>
+                <label for="email">Email</label
+                ><input type="text" id="email" placeholder="Email" />
+              </li>
+            </ul>
+            <p>
+              By clicking <span id="continue">Continue</span> you agree to our
+              <a href="#">Terms and Policies</a>
+            </p>
+          </form>
+        </section>
+        <button id="payment-btn" class="continue center">
+          CONTINUE TO PAY
+        </button>
+      </section>
+    </div>
+
+    <!-- PROMO BANNER -->
+
+    <div class="grid-promo">
+      <div class="promo-item long-1">BUY TWO TICKETS AND GET</div>
+      <div class="promo-item large">
+        <p id="promo-number">50%</p>
+        <p id="off">OFF</p>
+      </div>
+      <div class="promo-item long-2">OFFER VALID TILL 21ST OF FEBRUARY</div>
+      <div class="promo-item long-3">TERMS AND CONDITIONS APPLY</div>
+      <div class="promo-item tall">
+        VISIT OUR CINEMAS <br />
+        AND <br />
+        ENJOY FREE
+        <div class="promo-images">
+          <img class="promo-img" src="img/cokes.png" alt="coke" />
+          <p id="and">AND</p>
+          <img class="promo-img" src="img/popcorn.png" alt="popcorn" />
+        </div>
+      </div>
+      <div class="promo-item short-last">POWERED BY DENARIO</div>
+    </div>
+  </body>
+
+  <div class="payment-page">
+    <div class="payment-page-top">
+      <p>Total:</p>
+      <p>N3000</p>
+    </div>
+    <section class="payment-cards-sect">
+      <p class="payment-page-labels">Select Card Type</p>
+      <div class="payment-cards">
+        <img src="img/cards.png" alt="cards" />
+      </div>
+    </section>
+    <section class="payment-form">
+      <p class="payment-page-labels">Card Number</p>
+      <input type="text" />
+      <div class="half-input">
+        <div>
+          <p class="payment-page-labels">Expiry Date</p>
+          <input type="text" />
+        </div>
+        <div id="secure">
+          <p class="payment-page-labels">Secure Code</p>
+          <input type="text" />
+        </div>
+      </div>
+      <p class="payment-page-labels">Name on Card</p>
+      <input type="text" />
+      <a href="review.html"><p class="modify-details">Modify Details</p></a>
+      <button class="continue-pay">PAY NOW</button>
+    </section>
+  </div>
+
+  <script src="modal.js"></script>
+</html>
