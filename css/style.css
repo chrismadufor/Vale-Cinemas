@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&family=Roboto+Mono:wght@300;400;500&family=Rubik:wght@400;500;600;700;800&display=swap");
+
 /* GENERAL */
 html {
   box-sizing: border-box;
@@ -37,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: "Rubik";
+  font-weight: 500;
 }
 p,
 ul,
@@ -139,7 +142,7 @@ a:hover {
 }
 .img-slider {
   position: relative;
-  height: 800px;
+  height: 650px;
   max-width: 100vw;
 }
 .img-slider .slide {
@@ -317,7 +320,7 @@ header {
 }
 h1.logo-name {
   font-size: 30px;
-  font-family: "Orator Std";
+  font-family: "Roboto Mono";
   margin: 15px;
   display: none;
 }
@@ -457,7 +460,7 @@ header li a:hover {
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Rubik";
   margin-right: 10px;
 }
 .btn-div {
@@ -469,15 +472,17 @@ header li a:hover {
   right: 5%;
   text-align: center;
   color: white;
+  font-weight: 300;
 }
 .watch-trailer a:hover {
-  font-weight: 600;
+  font-weight: 500;
   color: white;
 }
 .watch-trailer-text p {
-  font-size: 32px;
-  font-family: "Orator Std";
+  font-size: 28px;
+  font-family: "Roboto Mono";
   margin: 10px;
+  text-transform: uppercase;
 }
 .watch-trailer-icon i {
   font-size: 48px;
@@ -687,7 +692,7 @@ img.movie-section-thumbnail {
 }
 .logo-name {
   font-size: 25px;
-  font-family: "Orator Std";
+  font-family: "Roboto mono";
   margin-top: 25px;
 }
 .footer-links {
@@ -913,8 +918,8 @@ img.movie-section-thumbnail {
     font-size: 120px;
   }
   header {
-    padding-right: 80px;
-    padding-left: 40px;
+    padding-right: 50px;
+    padding-left: 20px;
   }
   header ul {
     display: none;
@@ -922,6 +927,8 @@ img.movie-section-thumbnail {
   #menu-icon {
     display: flex;
     display: block;
+    color: #eee;
+    z-index: 200;
   }
   #searchbox {
     display: none;
