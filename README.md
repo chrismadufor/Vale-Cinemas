@@ -1,2 +1,2 @@
 # Vale-Cinemas
-Landing Page and Movie Pages for Vale Cinemas
+Landing Page and individual book movie pages for Vale Cinemas
