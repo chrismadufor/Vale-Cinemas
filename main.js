@@ -24,6 +24,15 @@ searchIconSmall.addEventListener('click', function () {
         searchBox.style.pointerEvents = 'auto'
     }
 });
+searchIconSmall.addEventListener('click', function () {
+    if (searchBox.style.top == '60px'){
+        searchBox.style.top = '-60px';
+        searchBox.style.pointerEvents = 'none';
+    } else{
+        searchBox.style.top = '60px'
+        searchBox.style.pointerEvents = 'auto'
+    }
+});
 
 menuIcon.addEventListener('click', function () {
     if (slideOutMenu.style.opacity == '1'){
@@ -112,6 +121,31 @@ carouselButtons.forEach(button => {
         }
 
         carouselImages.style.transform = `translateX(${translateX}px)`
+    });
+});
+
+// CAROUSEL 2
+const csImages = document.querySelector('.cs-image-wrap');
+const carouselButton = document.querySelectorAll('.carousel-btns');
+let numberOfImage = document.querySelectorAll('.cs-image-slider .image-container').length;
+    let imageIndexs = 1;
+    let translateXs = 0;
+
+carouselButton.forEach(button => {
+
+    button.addEventListener('click', event => {
+        if(event.target.id === 'prev') {
+            if (imageIndexs !== 1) {
+                imageIndexs--;
+                translateXs += 265;
+            }
+        } else{
+            if (imageIndexs !== numberOfImage) {
+                imageIndexs++;
+                translateXs -= 265
+            }
+        }
+        csImages.style.transform = `translateX(${translateXs}px)`;
     });
 });
 
