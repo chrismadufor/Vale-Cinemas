@@ -296,7 +296,7 @@ header ul,
 
 /* -------- NAV-BAR -------- */
 header {
-  padding: 5px 30px;
+  padding: 5px 40px 5px 20px;
   background-color: transparent;
   align-items: center;
   height: 100px;
@@ -425,6 +425,8 @@ header li a:hover {
 #search-icon {
   color: white;
   cursor: pointer;
+  font-size: 18px;
+  margin-left: 30px;
   transition: 0.4s;
 }
 #search-box {
@@ -439,11 +441,11 @@ header li a:hover {
   /* display: none; */
 }
 #search-box input {
-  height: 48px;
+  height: 40px;
   width: 100%;
   padding: 0 16px;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* -------- MAIN -------- */
@@ -480,10 +482,10 @@ header li a:hover {
   font-weight: 500;
   color: white;
 }
-.watch-trailer-text p {
-  font-size: 28px;
+a .watch-trailer-text p {
+  font-size: 36px;
   font-family: "Roboto mono", "poppins";
-  margin: 10px;
+  margin: 0 10px;
   text-transform: uppercase;
 }
 .watch-trailer-icon i {
@@ -855,7 +857,7 @@ img.movie-section-thumbnail {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
   }
   header li {
     border: 0;
@@ -872,6 +874,9 @@ img.movie-section-thumbnail {
   }
 }
 @media (max-width: 900px) {
+  a .watch-trailer-text p {
+    font-size: 28px;
+  }
   .carousel,
   .cs-image-slider {
     width: 515px;
@@ -937,7 +942,7 @@ img.movie-section-thumbnail {
   }
   /* For Movie Page */
   .movie-first-section {
-    height: 70vh;
+    max-height: 500px;
   }
 }
 
@@ -949,13 +954,13 @@ img.movie-section-thumbnail {
     width: 95%;
   }
   .help-line {
-    font-size: 12px;
+    display: none;
   }
   header li:last-child {
     display: none;
   }
   .logo img {
-    width: 150px;
+    width: 200px;
   }
   h1.movie-name {
     font-size: 35px;
@@ -1013,6 +1018,9 @@ img.movie-section-thumbnail {
 }
 
 @media (max-width: 600px) {
+  a .watch-trailer-text p {
+    font-size: 24px;
+  }
   .carousel-btn {
     height: 40px;
     width: 40px;
@@ -1179,9 +1187,17 @@ img.movie-section-thumbnail {
     width: 420px;
     height: 240px;
   }
+  /* FOR MOVIE PAGE */
+  .movie-first-section {
+    height: 70vh;
+    max-height: 400px;
+  }
 }
 
 @media (max-width: 450px) {
+  a .watch-trailer-text p {
+    font-size: 18px;
+  }
   .carousel,
   .cs-image-slider {
     width: 250px;
@@ -1240,10 +1256,10 @@ img.movie-section-thumbnail {
     /* padding: 5px 10px; */
   }
   img.logo {
-    width: 100px;
+    width: 150px;
   }
   header {
-    padding: 5px 40px;
+    padding: 5px 30px 5px 10px;
     height: 70px;
     justify-content: space-between;
   }

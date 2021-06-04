@@ -458,9 +458,9 @@ button.continue-pay {
 @media (max-width: 900px) {
   .first-form {
     width: 500px;
-    margin-top: 150px;
+    margin-top: 70px;
     height: 250px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .form-inputs {
     width: 350px;
@@ -477,11 +477,11 @@ button.continue-pay {
 @media (max-width: 600px) {
   .first-form {
     width: 85%;
-    margin: 0 auto;
+    margin: 50px auto 0;
     padding: 10px;
     margin-top: 100px;
     height: 220px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .form-inputs {
     width: 280px;
@@ -506,11 +506,9 @@ button.continue-pay {
 @media (max-width: 450px) {
   .first-form {
     width: 90%;
-    margin: 0 auto;
-    margin-top: 100px;
     padding: 10px;
     height: 200px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .form-inputs {
     width: 280px;
@@ -540,7 +538,7 @@ button.continue-pay {
     padding: 0;
     margin-top: 80px;
     height: 180px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
   .form-inputs {
     width: 280px;
@@ -560,32 +558,5 @@ button.continue-pay {
   }
   .first-form-label {
     font-size: 12px;
-  }
-}
-@media (max-width: 760px) {
-  .form,
-  .booking-form,
-  .before-payment {
-    width: 80%;
-    margin: 10px auto;
-    padding: 10px 10px 30px 10px;
-  }
-  /* .continue {
-    width: 130px;
-    margin: 10px 20px;
-  } */
-  .book-movie ul {
-    display: flex;
-    flex-direction: column;
-  }
-  .book-movie ul li {
-    width: 90%;
-    margin: 5px auto;
-  }
-  .form button .continue {
-    margin: 10px auto 0 auto;
-  }
-  .order-summary {
-    padding: 0 20px;
   }
 }

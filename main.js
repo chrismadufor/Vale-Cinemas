@@ -6,7 +6,7 @@ const searchBox = document.getElementById('search-box');
 const homePageForm = document.getElementById('home-booking form');
 
 searchIcon.addEventListener('click', function () {
-    if (searchBox.style.top == '100px'){
+    if (searchBox.style.top === '100px'){
         searchBox.style.top = '-50px';
         searchBox.style.pointerEvents = 'none';
     } else{
@@ -14,22 +14,12 @@ searchIcon.addEventListener('click', function () {
         searchBox.style.pointerEvents = 'auto'
     }
 });
-
 searchIconSmall.addEventListener('click', function () {
-    if (searchBox.style.top == '110px'){
-        searchBox.style.top = '-50px';
-        searchBox.style.pointerEvents = 'none';
-    } else{
-        searchBox.style.top = '110px'
-        searchBox.style.pointerEvents = 'auto'
-    }
-});
-searchIconSmall.addEventListener('click', function () {
-    if (searchBox.style.top == '60px'){
+    if (searchBox.style.top === '70px'){
         searchBox.style.top = '-60px';
         searchBox.style.pointerEvents = 'none';
     } else{
-        searchBox.style.top = '60px'
+        searchBox.style.top = '70px'
         searchBox.style.pointerEvents = 'auto'
     }
 });
